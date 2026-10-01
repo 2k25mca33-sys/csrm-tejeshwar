@@ -10,8 +10,6 @@ RUN npm run build
 FROM maven:3.9.6-eclipse-temurin-21 AS backend-build
 WORKDIR /app/backend
 COPY csrm-backend/pom.xml ./
-# Download dependencies
-RUN mvn dependency:go-offline -B
 COPY csrm-backend/src ./src
 # Copy frontend build to backend static folder
 COPY --from=frontend-build /app/frontend/dist ./src/main/resources/static
