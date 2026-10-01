@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import api from '../services/api';
-import { useAuth } from '../context/AuthContext';
 
 export const Resources = () => {
     const [resources, setResources] = useState<any[]>([]);
