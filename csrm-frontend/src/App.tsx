@@ -33,6 +33,7 @@ function App() {
               <Route path="/notifications" element={<Notifications />} />
               <Route path="/services" element={<ServiceRequests />} />
               
+              <Route path="/admin" element={<Navigate to="/admin/users" replace />} />
               <Route path="/admin/users" element={<UserManagement />} />
               <Route path="/admin/reports" element={<Reports />} />
               <Route path="/admin/audit" element={<AuditLogs />} />
